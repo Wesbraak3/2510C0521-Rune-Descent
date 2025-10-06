@@ -49,7 +49,7 @@ namespace ItemManagementSystem {
             item.itemModel = (GameObject)EditorGUILayout.ObjectField("Model", item.itemModel, typeof(GameObject), false);
 
             EditorGUILayout.Space();
-            item.randomise = EditorGUILayout.Toggle("Randomise", item.randomise);
+            item.randomize = EditorGUILayout.Toggle("Randomise", item.randomize);
             item.value = EditorGUILayout.IntField("Value", item.value); 
             item.maxStack = Mathf.Clamp(
                 EditorGUILayout.IntField("Max Stack", item.maxStack),

@@ -23,8 +23,8 @@ namespace ItemManagementSystem {
     }
 
     public enum StatType {
-        [StatCategory(StatCategory.Meta)] Durability,
-        [StatCategory(StatCategory.Meta)] Uses,
+        [StatCategory(StatCategory.Meta)] MaxDurability,
+        [StatCategory(StatCategory.Meta)] MaxUses,
         [StatCategory(StatCategory.Meta)] BuffDuration,
         [StatCategory(StatCategory.Meta)] Cooldown,
 
