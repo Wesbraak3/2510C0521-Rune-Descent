@@ -8,7 +8,7 @@ public class testinputs: MonoBehaviour {
 
     private void Update() {
         if (Keyboard.current.gKey.wasPressedThisFrame) {
-            inventory.AddItem(new("Tutor Sword", true));
+            inventory.AddItem(new("Tutor Sword"));
             Debug.Log("G key was pressed!");
         }
         if (Keyboard.current.hKey.wasPressedThisFrame) {

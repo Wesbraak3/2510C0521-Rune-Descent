@@ -32,6 +32,7 @@ namespace ItemManagementSystem {
         [TextArea] public string itemDescription;
         public int value;
         public int maxStack;
+        public bool randomise;
 
         public Sprite itemIcon;
         public GameObject itemModel;

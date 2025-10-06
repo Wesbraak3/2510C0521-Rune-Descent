@@ -35,15 +35,21 @@ namespace ItemManagementSystem {
         public override void OnInspectorGUI() {
             ItemData item = (ItemData)target;
 
-            // Draw default fields
+            //Draw default
             EditorGUILayout.LabelField("Core Info", EditorStyles.boldLabel);
-            item.itemName = EditorGUILayout.TextField("Name", item.itemName);
+
+            // Show the name, but not editable (comes from filename)
+            EditorGUI.BeginDisabledGroup(true);
+            EditorGUILayout.TextField("Name", item.name);
+            EditorGUI.EndDisabledGroup();
+
             EditorGUILayout.LabelField("Description");
             item.itemDescription = EditorGUILayout.TextArea(item.itemDescription, GUILayout.Height(60));
             item.itemIcon = (Sprite)EditorGUILayout.ObjectField("Icon", item.itemIcon, typeof(Sprite), false);
             item.itemModel = (GameObject)EditorGUILayout.ObjectField("Model", item.itemModel, typeof(GameObject), false);
 
             EditorGUILayout.Space();
+            item.randomise = EditorGUILayout.Toggle("Randomise", item.randomise);
             item.value = EditorGUILayout.IntField("Value", item.value); 
             item.maxStack = Mathf.Clamp(
                 EditorGUILayout.IntField("Max Stack", item.maxStack),
