@@ -1,4 +1,3 @@
-using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -56,8 +55,8 @@ namespace ItemManagementSystem {
 
             StackSize = Mathf.Clamp(stackSize, 1, MaxStack);
         }
-        public Item(string itemName, int stackSize = 1) 
-            : this(ItemDatabase.GetItemDataByName(itemName), stackSize) { }
+        public Item(string itemName, int stackSize = 1)
+            : this(ItemDatabase.GetItemDataByName(itemName, new ItemDatabase.AccessKey()), stackSize) { }
 
         public bool HasStat(StatType type) => Stats.ContainsKey(type);
         public float GetStat(StatType type) => Stats.TryGetValue(type, out var value) ? value : 0f;
