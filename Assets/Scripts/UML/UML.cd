@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ItemManagementSystem.Inventory">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAAAgAAAACgAACAgAEAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Item Management System\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ItemManagementSystem.ItemData">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQBAAAAAAAAIAAgAAAABAAACBAIgAIAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="stats" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ItemManagementSystem.ItemDatabase">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAEAAAAIABAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Item Management System\Item\Database\ItemDatabase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="itemsByName" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ItemManagementSystem.Item">
+    <Position X="6.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ApCCAAAAABAgAACAAAEAAAQACAAgAAAAAAAgBBAACAA=</HashCode>
+      <FileName>Assets\Scripts\Item Management System\Item\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ItemManagementSystem.Stat">
+    <Position X="1.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
