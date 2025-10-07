@@ -10,3 +10,4 @@ public class GameOverEvent {
     public string Reason;
     public GameOverEvent(string reason) => Reason = reason;
 }
+
