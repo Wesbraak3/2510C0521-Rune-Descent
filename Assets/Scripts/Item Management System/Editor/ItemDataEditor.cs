@@ -1,91 +1,118 @@
+using NUnit.Framework.Internal;
 using UnityEditor;
-using UnityEngine;
 using UnityEditorInternal;
+using UnityEngine;
 
 namespace ItemManagementSystem {
     [CustomEditor(typeof(ItemData))]
     public class ItemDataEditor : Editor {
         private ReorderableList statList;
 
+        private SerializedProperty statsProp;
+        private SerializedProperty categoryProp;
+        private SerializedProperty weaponTypeProp;
+        private SerializedProperty armorTypeProp;
+        private SerializedProperty maxStackProp;
+        private SerializedProperty randomizeStatsProp;
+        private SerializedProperty descriptionProp;
+        private SerializedProperty gameObjectProp;
+        private SerializedProperty valueProp;
+
         private void OnEnable() {
-            statList = new ReorderableList(serializedObject,
-                serializedObject.FindProperty("stats"),
-                true, true, true, true) {
-                drawHeaderCallback = rect => {
-                    EditorGUI.LabelField(rect, "Stats");
+            statsProp = serializedObject.FindProperty("stats");
+            categoryProp = serializedObject.FindProperty("category");
+            weaponTypeProp = serializedObject.FindProperty("weaponType");
+            armorTypeProp = serializedObject.FindProperty("armorType");
+            maxStackProp = serializedObject.FindProperty("maxStack");
+            randomizeStatsProp = serializedObject.FindProperty("randomizeStats");
+            descriptionProp = serializedObject.FindProperty("itemDescription");
+            gameObjectProp = serializedObject.FindProperty("itemModel");
+            valueProp = serializedObject.FindProperty("value");
+
+            statList = new ReorderableList(serializedObject, statsProp, true, true, true, true) {
+                drawHeaderCallback = rect => EditorGUI.LabelField(rect, "Stats"),
+                drawElementCallback = (rect, index, isActive, isFocused) => {
+                    var element = statsProp.GetArrayElementAtIndex(index);
+                    var typeProp = element.FindPropertyRelative("type");
+                    var valueProp = element.FindPropertyRelative("value");
+
+                    float half = rect.width / 2f - 5f;
+                    rect.y += 2;
+                    EditorGUI.PropertyField(new Rect(rect.x, rect.y, half, EditorGUIUtility.singleLineHeight),
+                        typeProp, GUIContent.none);
+                    EditorGUI.PropertyField(new Rect(rect.x + half + 10, rect.y, half, EditorGUIUtility.singleLineHeight),
+                        valueProp, GUIContent.none);
                 }
-            };
-
-            statList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) => {
-                var element = statList.serializedProperty.GetArrayElementAtIndex(index);
-                var typeProp = element.FindPropertyRelative("type");
-                var valueProp = element.FindPropertyRelative("value");
-
-                rect.y += 2;
-                float halfWidth = rect.width / 2;
-                EditorGUI.PropertyField(
-                    new Rect(rect.x, rect.y, halfWidth - 5, EditorGUIUtility.singleLineHeight),
-                    typeProp, GUIContent.none);
-                EditorGUI.PropertyField(
-                    new Rect(rect.x + halfWidth + 5, rect.y, halfWidth - 5, EditorGUIUtility.singleLineHeight),
-                    valueProp, GUIContent.none);
             };
         }
 
         public override void OnInspectorGUI() {
-            ItemData item = (ItemData)target;
+            serializedObject.Update();
 
-            //Draw default
-            EditorGUILayout.LabelField("Core Info", EditorStyles.boldLabel);
+            var item = (ItemData)target;
 
-            // Show the name, but not editable (comes from filename)
+            // Read-only name from asset filename
             EditorGUI.BeginDisabledGroup(true);
             EditorGUILayout.TextField("Name", item.name);
             EditorGUI.EndDisabledGroup();
 
-            EditorGUILayout.LabelField("Description");
-            item.itemDescription = EditorGUILayout.TextArea(item.itemDescription, GUILayout.Height(60));
-            item.itemIcon = (Sprite)EditorGUILayout.ObjectField("Icon", item.itemIcon, typeof(Sprite), false);
-            item.itemModel = (GameObject)EditorGUILayout.ObjectField("Model", item.itemModel, typeof(GameObject), false);
+            EditorGUILayout.PropertyField(descriptionProp);
 
             EditorGUILayout.Space();
-            item.randomize = EditorGUILayout.Toggle("Randomise", item.randomize);
-            item.value = EditorGUILayout.IntField("Value", item.value); 
-            item.maxStack = Mathf.Clamp(
-                EditorGUILayout.IntField("Max Stack", item.maxStack),
-                1, 999
-                );
 
-            // Category
+            // icon field
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField("Icon", GUILayout.Width(50));
+
+            GUILayout.FlexibleSpace();
+
+            item.itemIcon = (Sprite)EditorGUILayout.ObjectField(
+                item.itemIcon,
+                typeof(Sprite),
+                false,
+                GUILayout.Height(EditorGUIUtility.singleLineHeight * 4),
+                GUILayout.Width(EditorGUIUtility.singleLineHeight * 4)
+            );
+            EditorGUILayout.EndHorizontal();
+
+            // game model
+            EditorGUILayout.PropertyField(gameObjectProp);
+
+            EditorGUILayout.Space();
+
+            // value of the item
+            EditorGUILayout.PropertyField(valueProp);
+            // Stack limit enforcement
+            maxStackProp.intValue = Mathf.Clamp(
+                EditorGUILayout.IntField("Max Stack", maxStackProp.intValue), 1, 999);
+
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Category", EditorStyles.boldLabel);
-            item.category = (ItemCategory)EditorGUILayout.EnumPopup("Category", item.category);
+            EditorGUILayout.PropertyField(categoryProp);
 
-            // Subtypes (conditional)
+            // Show subtype only when needed
+            var cat = (ItemCategory)categoryProp.enumValueIndex;
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Subtype", EditorStyles.boldLabel);
-
-            switch (item.category) {
+            switch (cat) {
                 case ItemCategory.Weapon:
-                    item.weaponType = (WeaponType)EditorGUILayout.EnumPopup("Weapon Type", item.weaponType);
+                    EditorGUILayout.PropertyField(weaponTypeProp, new GUIContent("Subtype"));
+                    EditorGUILayout.PropertyField(randomizeStatsProp);
                     break;
                 case ItemCategory.Armor:
-                    item.armorType = (ArmorType)EditorGUILayout.EnumPopup("Armor Type", item.armorType);
+                    EditorGUILayout.PropertyField(armorTypeProp, new GUIContent("Subtype"));
+                    EditorGUILayout.PropertyField(randomizeStatsProp);
                     break;
                 default:
-                    EditorGUILayout.LabelField("No subtype applicable for this category.");
+                    EditorGUILayout.HelpBox("No subtype applicable for this category.", MessageType.Info);
                     break;
             }
 
-            // Stats
+            EditorGUILayout.Space();
             EditorGUILayout.LabelField("Stats", EditorStyles.boldLabel);
             statList.DoLayoutList();
 
             serializedObject.ApplyModifiedProperties();
-
-            // Mark dirty
-            if (GUI.changed)
-                EditorUtility.SetDirty(target);
         }
     }
 }

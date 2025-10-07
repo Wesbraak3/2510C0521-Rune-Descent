@@ -9,17 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22186d39da8f0da49889ca626a94c4ed, type: 3}
+  m_Script: {fileID: 11500000, guid: d87ae21a5ae698c4d8f17985554073dd, type: 3}
   m_Name: Tutor Sword
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Tutor Sword
+  itemName: 
   itemDescription: 
-  value: 1
+  value: 0
+  maxStack: 1
+  randomize: 0
   itemIcon: {fileID: 0}
   itemModel: {fileID: 0}
   category: 0
   weaponType: 0
-  armorType: 1
+  armorType: 0
   stats:
-  - type: 7
-    value: 5
+  - type: 0
+    value: 0

@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c401d483d593fc94c973477a0f9b51f2, type: 3}
+  m_Script: {fileID: 11500000, guid: d87ae21a5ae698c4d8f17985554073dd, type: 3}
   m_Name: Tower Part
   m_EditorClassIdentifier: Assembly-CSharp::Inventory.ItemData
   itemName: 
   itemDescription: 
   value: 0
+  maxStack: 1
+  randomize: 0
   itemIcon: {fileID: 0}
   itemModel: {fileID: 0}
   category: 0

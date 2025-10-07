@@ -9,6 +9,7 @@ namespace ItemManagementSystem {
         [Header("Inventory Settings")]
         [SerializeField]
         private int maxSize = 20;
+
         public int Size => items.Count;
         public int MaxSize => maxSize;
 

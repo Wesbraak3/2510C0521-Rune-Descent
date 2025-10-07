@@ -1,95 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ItemManagementSystem.Inventory" Collapsed="true">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+  <Class Name="ItemManagementSystem.Inventory">
+    <Position X="9.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAgAAAAAgAAAACgAACAgAEAgAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Inventory.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="items" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="ItemManagementSystem.ItemData" Collapsed="true">
-    <Position X="1.75" Y="2.75" Width="1.5" />
+  <Class Name="ItemManagementSystem.ItemData">
+    <Position X="3.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQBAAAAAAAAIAAgAAAABAAACBAIgAIAAIAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Item\Data\ItemData.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="stats" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="ItemManagementSystem.StatCategoryAttribute" Collapsed="true">
-    <Position X="5.25" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ItemManagementSystem.StatTypeExtensions" Collapsed="true">
-    <Position X="1.75" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ItemManagementSystem.InitialiseItemDatabase" Collapsed="true">
-    <Position X="1.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Database\InitialiseItemDatabase.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ItemManagementSystem.ItemDatabase" Collapsed="true">
-    <Position X="3.5" Y="2.75" Width="1.5" />
+  <Class Name="ItemManagementSystem.ItemDatabase">
+    <Position X="3.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAEAAAAIABAEAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Item\Database\ItemDatabase.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="itemsByName" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="ItemManagementSystem.Item" Collapsed="true">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+  <Class Name="ItemManagementSystem.Item">
+    <Position X="6.25" Y="4.75" Width="2" />
     <TypeIdentifier>
       <HashCode>ApCCAAAAABAgAACAAAEAAAQACAAgAAAAAAAgBBAACAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Item\Item.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="ItemManagementSystem.Stat" Collapsed="true">
-    <Position X="1.75" Y="5" Width="1.5" />
+  <Struct Name="ItemManagementSystem.Stat">
+    <Position X="1.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Enum Name="ItemManagementSystem.ItemCategory" Collapsed="true">
-    <Position X="3.5" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>hEAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAEAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemData.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="ItemManagementSystem.WeaponType" Collapsed="true">
-    <Position X="3.5" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAQAAAAAAAAAACIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemData.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="ItemManagementSystem.ArmorType" Collapsed="true">
-    <Position X="1.75" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAI=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemData.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="ItemManagementSystem.StatCategory" Collapsed="true">
-    <Position X="5.25" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAgAAAAAAAAAAAAAIAAAAAAAgAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="ItemManagementSystem.StatType" Collapsed="true">
-    <Position X="1.75" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAAAiAIAAAAAAAAAEAAACEEAgIgAAAIgAAAQAgAAEAE=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

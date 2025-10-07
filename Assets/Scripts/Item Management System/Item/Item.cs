@@ -36,18 +36,19 @@ namespace ItemManagementSystem {
             foreach (var stat in baseData.stats) {
                 float statValue = stat.value;
 
-                if (baseData.randomize)
+                if (baseData.randomizeStats)
+                    // magic num????
                     statValue *= UnityEngine.Random.Range(0.8f, 1.2f);
 
                 Stats[stat.type] = statValue;
 
                 // initialize meta values if defined
                 switch (stat.type) {
-                    case StatType.MaxDurability:
+                    case StatType.Durability:
                         Durability = Mathf.RoundToInt(statValue);
                         break;
 
-                    case StatType.MaxUses:
+                    case StatType.Uses:
                         Uses = Mathf.RoundToInt(statValue);
                         break;
                 }
