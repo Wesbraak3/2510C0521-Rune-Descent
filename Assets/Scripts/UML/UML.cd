@@ -2,6 +2,10 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ItemManagementSystem.Inventory">
     <Position X="9.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAgAAAAAgAAAACgAACAgAEAgAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Inventory.cs</FileName>
@@ -12,33 +16,52 @@
   </Class>
   <Class Name="ItemManagementSystem.ItemData">
     <Position X="3.75" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAQBAAAAAAAAIAAgAAAABAAACBAIgAIAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAYBAAAAAAAAAAAgAAAABAAACBAIgAIAAIAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Item\Data\ItemData.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="stats" />
     </ShowAsCollectionAssociation>
   </Class>
+  <Class Name="ItemManagementSystem.Item">
+    <Position X="6.25" Y="4.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ApCCAAAAABAgAACAAAEAAAQACAAgAAAAAAAgBBAACAA=</HashCode>
+      <FileName>Assets\Scripts\Item Management System\Item\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="ItemManagementSystem.ItemDatabase">
     <Position X="3.75" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="ItemManagementSystem.ItemDatabase.AccessKey" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Item Management System\Item\Database\ItemDatabase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAEAAAAIABAEAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAQAAAAAAAAAAAAAAAAAABAEAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Item\Database\ItemDatabase.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="itemsByName" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="ItemManagementSystem.Item">
-    <Position X="6.25" Y="4.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>ApCCAAAAABAgAACAAAEAAAQACAAgAAAAAAAgBBAACAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Item.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Struct Name="ItemManagementSystem.Stat">
-    <Position X="1.5" Y="5.25" Width="1.5" />
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
