@@ -57,6 +57,27 @@
       <Field Name="itemsByName" />
     </ShowAsCollectionAssociation>
   </Class>
+  <Class Name="InputBehaviour.BuildModeInput">
+    <Position X="15.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Behaviours\BuildModeInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputBehaviour.MovementInput">
+    <Position X="12.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Behaviours\MovementInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputBehaviour.InputHandler">
+    <Position X="13.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEAAAAAAAAAAAAAAAAAAAAAAAQIAEBAAAgACAA=</HashCode>
+      <FileName>Assets\Scripts\Input\InputHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="ItemManagementSystem.Stat">
     <Position X="1.25" Y="4.75" Width="1.5" />
     <Compartments>
