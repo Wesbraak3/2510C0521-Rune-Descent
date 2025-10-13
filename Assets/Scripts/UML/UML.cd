@@ -6,6 +6,14 @@
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true">
+      <Path>
+        <Point X="16.5" Y="1.691" />
+        <Point X="16.5" Y="2.408" />
+        <Point X="10" Y="2.408" />
+        <Point X="10" Y="4.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAgAAAAAgAAAACgAACAgAEAgAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Inventory.cs</FileName>
@@ -57,26 +65,77 @@
       <Field Name="itemsByName" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="InputBehaviour.BuildModeInput">
-    <Position X="15.75" Y="7.25" Width="1.5" />
+  <Class Name="InputHandler.BuildModeToggleInput">
+    <Position X="22.5" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Input\Behaviours\BuildModeInput.cs</FileName>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAEACAAAAQAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Building\BuildModeToggleInput.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="InputBehaviour.MovementInput">
-    <Position X="12.75" Y="7.25" Width="1.5" />
+  <Class Name="InputHandler.InputHandlerBase">
+    <Position X="23.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true">
+      <Path>
+        <Point X="16.5" Y="1.691" />
+        <Point X="16.5" Y="2.386" />
+        <Point X="24.25" Y="2.386" />
+        <Point X="24.25" Y="2.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Input\Behaviours\MovementInput.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAIQEAAAAAACAQ=</HashCode>
+      <FileName>Assets\Scripts\Input\InputHandlerBase.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="InputBehaviour.InputHandler">
-    <Position X="13.75" Y="4" Width="1.5" />
+  <Class Name="InputHandler.MovementInput">
+    <Position X="24.5" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="InputHandler.InputHandlerBase" FixedToPoint="true">
+      <Path>
+        <Point X="24.25" Y="5.078" />
+        <Point X="24.25" Y="5.875" />
+        <Point X="25.25" Y="5.875" />
+        <Point X="25.25" Y="6.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAgAAEAAAAAAAAAAAAAAAAAAAAAAAQIAEBAAAgACAA=</HashCode>
-      <FileName>Assets\Scripts\Input\InputHandler.cs</FileName>
+      <HashCode>BAQAAAAAAAAAAAAABAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Movement\MovementInput.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="MovementEvent" Collapsed="true">
+    <Position X="14.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnableMovementEvent" Collapsed="true">
+    <Position X="14.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IsBuildModeModeActiveEvent" Collapsed="true">
+    <Position X="16.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
+    <Position X="15.75" Y="1" Width="1.5" />
+    <TypeIdentifier />
   </Class>
   <Struct Name="ItemManagementSystem.Stat">
     <Position X="1.25" Y="4.75" Width="1.5" />

@@ -1,32 +1,33 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class IsBuildModeModeActiveEvent {
-    public bool IsBuildModeModeActive;
-    public IsBuildModeModeActiveEvent(bool isBuildModeModeActive) => IsBuildModeModeActive = isBuildModeModeActive;
-}
 
-public class BuildModeToggleInput : MonoBehaviour {
-    [SerializeField] private InputActionReference inputAction;
-    [SerializeField] private bool disableMovement = false;
-    private bool buildMode = false;
+namespace InputHandler {
+    public class BuildModeToggleInput : InputHandlerBase {
+        [SerializeField] private bool disableMovement = true;
+        private bool buildMode = false;
 
-    private void OnEnable() {
-        inputAction.action.Enable();
-        inputAction.action.started += OnActionStarted;
-    }
-    private void OnDisable() {
-        inputAction.action.started -= OnActionStarted;
-        inputAction.action.Disable();
-    }
-
-    private void OnActionStarted(InputAction.CallbackContext ctx) {
-        buildMode = !buildMode;
-
-        if (disableMovement) {
-            EventBus.Publish(new IsMoventEnabled(buildMode));
+        protected override void Subscribe() {
+            if (Action != null)
+                Action.started += ToggleBuildMode;
         }
 
-        EventBus.Publish(new IsBuildModeModeActiveEvent(buildMode));
+        protected override void Unsubscribe() {
+            if (Action != null)
+                Action.started -= ToggleBuildMode;
+        }
+
+        private void ToggleBuildMode(InputAction.CallbackContext ctx) {
+            buildMode = !buildMode;
+
+            // Broadcast build mode state
+            EventBus.Publish(new IsBuildModeModeActiveEvent(buildMode));
+
+            // Handle movement enable/disable logic
+            bool allowMovement = !(disableMovement && buildMode);
+            EventBus.Publish(new EnableMovementEvent(allowMovement));
+
+            Debug.Log($"[Input] Build Mode: {buildMode}, Movement Enabled: {allowMovement}");
+        }
     }
 }
