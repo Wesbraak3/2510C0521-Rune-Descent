@@ -71,8 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e5ef7ca5402f5448bf35744ae1206b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController.PlayerController
-  movementSpeed: 10
-  rotationSpeed: 5
+  inputAction: {fileID: 0}
+  moveTime: 0.2
 --- !u!1 &3996253755228839644
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,8 +82,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1453164310869993772}
-  - component: {fileID: 7295495163810360496}
-  - component: {fileID: 5628410453529779421}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -106,34 +104,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9043114796432110093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7295495163810360496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3996253755228839644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eedbfdd5d29335047b5e4cf88d9527f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  inputAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  inputEnabled: 1
---- !u!114 &5628410453529779421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3996253755228839644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c214cafd01b3942ab7e827bbf704be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BuildModeToggleInput
-  inputAction: {fileID: -7523111919812778633, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  disableMovement: 1
 --- !u!1 &5304518283044073726
 GameObject:
   m_ObjectHideFlags: 0

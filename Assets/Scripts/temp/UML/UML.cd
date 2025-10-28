@@ -6,14 +6,6 @@
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true">
-      <Path>
-        <Point X="16.5" Y="1.691" />
-        <Point X="16.5" Y="2.408" />
-        <Point X="10" Y="2.408" />
-        <Point X="10" Y="4.75" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAgAAAAAgAAAACgAACAgAEAgAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item Management System\Inventory.cs</FileName>
@@ -66,7 +58,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="InputHandler.BuildModeToggleInput">
-    <Position X="22.5" Y="6.25" Width="1.5" />
+    <Position X="21.75" Y="6.25" Width="2" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -81,14 +73,6 @@
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true">
-      <Path>
-        <Point X="16.5" Y="1.691" />
-        <Point X="16.5" Y="2.386" />
-        <Point X="24.25" Y="2.386" />
-        <Point X="24.25" Y="2.75" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAIQEAAAAAACAQ=</HashCode>
       <FileName>Assets\Scripts\Input\InputHandlerBase.cs</FileName>
@@ -112,7 +96,7 @@
       <FileName>Assets\Scripts\Input\Movement\MovementInput.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MovementEvent" Collapsed="true">
+  <Class Name="MeveInputEvent" Collapsed="true">
     <Position X="14.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -132,10 +116,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
-    <Position X="15.75" Y="1" Width="1.5" />
-    <TypeIdentifier />
   </Class>
   <Struct Name="ItemManagementSystem.Stat">
     <Position X="1.25" Y="4.75" Width="1.5" />
