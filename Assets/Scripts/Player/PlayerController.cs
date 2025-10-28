@@ -1,10 +1,8 @@
-﻿using System.Collections;
 using UnityEngine;
 
-namespace Assets.Scripts.Player {
+namespace player {
     public class PlayerController : MonoBehaviour {
-
-        // Use this for initialization
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start() {
 
         }

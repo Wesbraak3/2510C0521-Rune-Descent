@@ -57,6 +57,66 @@
       <Field Name="itemsByName" />
     </ShowAsCollectionAssociation>
   </Class>
+  <Class Name="InputHandler.BuildModeToggleInput">
+    <Position X="21.75" Y="6.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAEACAAAAQAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Building\BuildModeToggleInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputHandler.InputHandlerBase">
+    <Position X="23.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAIQEAAAAAACAQ=</HashCode>
+      <FileName>Assets\Scripts\Input\InputHandlerBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputHandler.MovementInput">
+    <Position X="24.5" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="InputHandler.InputHandlerBase" FixedToPoint="true">
+      <Path>
+        <Point X="24.25" Y="5.078" />
+        <Point X="24.25" Y="5.875" />
+        <Point X="25.25" Y="5.875" />
+        <Point X="25.25" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAAABAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Movement\MovementInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeveInputEvent" Collapsed="true">
+    <Position X="14.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnableMovementEvent" Collapsed="true">
+    <Position X="14.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IsBuildModeModeActiveEvent" Collapsed="true">
+    <Position X="16.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="ItemManagementSystem.Stat">
     <Position X="1.25" Y="4.75" Width="1.5" />
     <Compartments>
