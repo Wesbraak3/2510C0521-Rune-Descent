@@ -12,12 +12,3 @@ public class EnableMovementEvent {
 }
 
 #endregion
-
-#region BuidMode
-
-public class IsBuildModeModeActiveEvent {
-    public bool IsBuildModeModeActive;
-    public IsBuildModeModeActiveEvent(bool isBuildModeModeActive) => IsBuildModeModeActive = isBuildModeModeActive;
-}
-
-#endregion
