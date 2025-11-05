@@ -8,7 +8,7 @@
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAgAAAAAgAAAACgAACAgAEAgAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Inventory.cs</FileName>
+      <FileName>Assets\Scripts\temp\Item Management System\Inventory.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="items" />
@@ -21,7 +21,7 @@
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAYBAAAAAAAAAAAgAAAABAAACBAIgAIAAIAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemData.cs</FileName>
+      <FileName>Assets\Scripts\temp\Item Management System\Item\Data\ItemData.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="stats" />
@@ -34,7 +34,7 @@
     </Compartments>
     <TypeIdentifier>
       <HashCode>ApCCAAAAABAgAACAAAEAAAQACAAgAAAAAAAgBBAACAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Item.cs</FileName>
+      <FileName>Assets\Scripts\temp\Item Management System\Item\Item.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ItemManagementSystem.ItemDatabase">
@@ -51,7 +51,7 @@
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAQAAAAAAAAAAAAAAAAAABAEAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Database\ItemDatabase.cs</FileName>
+      <FileName>Assets\Scripts\temp\Item Management System\Item\Database\ItemDatabase.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="itemsByName" />
@@ -64,7 +64,7 @@
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAEACAAAAQAAQAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Input\Building\BuildModeToggleInput.cs</FileName>
+      <FileName>Assets\Scripts\temp\Input\Building\BuildModeToggleInput.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InputHandler.InputHandlerBase">
@@ -75,7 +75,7 @@
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAIQEAAAAAACAQ=</HashCode>
-      <FileName>Assets\Scripts\Input\InputHandlerBase.cs</FileName>
+      <FileName>Assets\Scripts\temp\Input\InputHandlerBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InputHandler.MovementInput">
@@ -100,21 +100,65 @@
     <Position X="14.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+      <FileName>Assets\Scripts\temp\Input\Events\InputEvents.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EnableMovementEvent" Collapsed="true">
     <Position X="14.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
-      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+      <FileName>Assets\Scripts\temp\Input\Events\InputEvents.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IsBuildModeModeActiveEvent" Collapsed="true">
     <Position X="16.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Input\Events\InputEvents.cs</FileName>
+      <FileName>Assets\Scripts\temp\Input\Events\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseHealth">
+    <Position X="3.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAgAAAAAhAAAAAAAABCAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Clicker\BaseHealth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BossHealth">
+    <Position X="2.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Clicker\BossHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerClicker">
+    <Position X="7.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Clicker\Clicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crate" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAIABAAAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Clicker\Crate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EnemyHealth">
+    <Position X="4.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Clicker\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextPopup">
+    <Position X="8.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAIAAEAAAAAAAAAACCEAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Clicker\TextPopup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="ItemManagementSystem.Stat">
@@ -124,8 +168,15 @@
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Item Management System\Item\Data\ItemStats.cs</FileName>
+      <FileName>Assets\Scripts\temp\Item Management System\Item\Data\ItemStats.cs</FileName>
     </TypeIdentifier>
   </Struct>
+  <Interface Name="IDamageable">
+    <Position X="2.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Clicker\Interfaces\IDamageable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
