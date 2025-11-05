@@ -187,6 +187,9 @@ MonoBehaviour:
   _visitiblityRules: {fileID: 0}
   _speed: 5
   _playerCamera: {fileID: 7299965310534254856}
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!136 &5331810971979257950
 CapsuleCollider:
   m_ObjectHideFlags: 0

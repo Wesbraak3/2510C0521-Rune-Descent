@@ -111,7 +111,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MouseRight"",
+                    ""name"": ""RightClick"",
                     ""type"": ""Button"",
                     ""id"": ""f4ad2a63-3ea2-47e3-a0e2-1cb612eed828"",
                     ""expectedControlType"": """",
@@ -278,7 +278,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""MouseRight"",
+                    ""action"": ""RightClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -868,7 +868,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
-        m_Player_MouseRight = m_Player.FindAction("MouseRight", throwIfNotFound: true);
+        m_Player_RightClick = m_Player.FindAction("RightClick", throwIfNotFound: true);
         m_Player_MouseLeft = m_Player.FindAction("MouseLeft", throwIfNotFound: true);
         m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
         // UI
@@ -966,7 +966,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Menu;
-    private readonly InputAction m_Player_MouseRight;
+    private readonly InputAction m_Player_RightClick;
     private readonly InputAction m_Player_MouseLeft;
     private readonly InputAction m_Player_MousePosition;
     /// <summary>
@@ -989,9 +989,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Menu => m_Wrapper.m_Player_Menu;
         /// <summary>
-        /// Provides access to the underlying input action "Player/MouseRight".
+        /// Provides access to the underlying input action "Player/RightClick".
         /// </summary>
-        public InputAction @MouseRight => m_Wrapper.m_Player_MouseRight;
+        public InputAction @RightClick => m_Wrapper.m_Player_RightClick;
         /// <summary>
         /// Provides access to the underlying input action "Player/MouseLeft".
         /// </summary>
@@ -1032,9 +1032,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Menu.started += instance.OnMenu;
             @Menu.performed += instance.OnMenu;
             @Menu.canceled += instance.OnMenu;
-            @MouseRight.started += instance.OnMouseRight;
-            @MouseRight.performed += instance.OnMouseRight;
-            @MouseRight.canceled += instance.OnMouseRight;
+            @RightClick.started += instance.OnRightClick;
+            @RightClick.performed += instance.OnRightClick;
+            @RightClick.canceled += instance.OnRightClick;
             @MouseLeft.started += instance.OnMouseLeft;
             @MouseLeft.performed += instance.OnMouseLeft;
             @MouseLeft.canceled += instance.OnMouseLeft;
@@ -1058,9 +1058,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Menu.started -= instance.OnMenu;
             @Menu.performed -= instance.OnMenu;
             @Menu.canceled -= instance.OnMenu;
-            @MouseRight.started -= instance.OnMouseRight;
-            @MouseRight.performed -= instance.OnMouseRight;
-            @MouseRight.canceled -= instance.OnMouseRight;
+            @RightClick.started -= instance.OnRightClick;
+            @RightClick.performed -= instance.OnRightClick;
+            @RightClick.canceled -= instance.OnRightClick;
             @MouseLeft.started -= instance.OnMouseLeft;
             @MouseLeft.performed -= instance.OnMouseLeft;
             @MouseLeft.canceled -= instance.OnMouseLeft;
@@ -1382,12 +1382,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMenu(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "MouseRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "RightClick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMouseRight(InputAction.CallbackContext context);
+        void OnRightClick(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "MouseLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

@@ -35,7 +35,7 @@ public class PlayerClicker : MonoBehaviour {
             }
         }
 
-        if (inputActions.Player.MouseRight.WasPerformedThisFrame()) {
+        if (inputActions.Player.RightClick.WasPerformedThisFrame()) {
             // Get the current mouse position from the input system
             Vector2 mousePosition = inputActions.Player.MousePosition.ReadValue<Vector2>();
 
