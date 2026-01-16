@@ -68,7 +68,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="InputHandler.InputHandlerBase">
-    <Position X="23.5" Y="2.75" Width="1.5" />
+    <Position X="10.25" Y="8.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
@@ -118,29 +118,29 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BaseHealth">
-    <Position X="3.75" Y="7.5" Width="1.5" />
+    <Position X="3.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAgAAAAAhAAAAAAAABCAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAAACAAAAAAACgAAAAghAAAAAAAABCAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Clicker\BaseHealth.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BossHealth">
-    <Position X="2.5" Y="10.75" Width="1.5" />
+    <Position X="2.25" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\Clicker\BossHealth.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerClicker">
-    <Position X="7.5" Y="7.75" Width="1.5" />
+    <Position X="7.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAAAACEA=</HashCode>
       <FileName>Assets\Scripts\Clicker\Clicker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Crate" BaseTypeListCollapsed="true">
-    <Position X="5.5" Y="14.25" Width="1.5" />
+    <Position X="7.25" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAIABAAAgAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Clicker\Crate.cs</FileName>
@@ -148,14 +148,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EnemyHealth">
-    <Position X="4.75" Y="10.75" Width="1.5" />
+    <Position X="4.75" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\Clicker\EnemyHealth.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TextPopup">
-    <Position X="8.5" Y="10.5" Width="1.5" />
+    <Position X="10.75" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CACAAIAAEAAAAAAAAAACCEAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Clicker\TextPopup.cs</FileName>
@@ -172,7 +172,7 @@
     </TypeIdentifier>
   </Struct>
   <Interface Name="IDamageable">
-    <Position X="2.5" Y="13.75" Width="1.5" />
+    <Position X="2.25" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Clicker\Interfaces\IDamageable.cs</FileName>
