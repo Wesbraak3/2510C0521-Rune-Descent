@@ -1,0 +1,36 @@
+services:
+  database:
+    build:
+      context: ./Database
+      dockerfile: Dockerfile
+    container_name: database
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: adminpassword
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+    networks:
+      - internal-db
+    ports:
+      - "27017:27017"
+
+  api:
+    build:
+      context: ./API
+      dockerfile: Dockerfile
+    container_name: api
+    environment:
+    restart: unless-stopped
+    depends_on:
+      - database
+    networks:
+      - internal-db
+      - internal-unity
+
+networks:
+  internal-db:
+  internal-unity:
+
+volumes:
+  mongo_data:
