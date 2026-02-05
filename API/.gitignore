@@ -1,0 +1,44 @@
+# Build & runtime artifacts
+bin/
+obj/
+out/
+publish/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Rider settings
+.idea/
+
+# Resharper
+*.DotSettings.user
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# NuGet packages (restore instead)
+*.nupkg
+packages/
+
+# ASP.NET / dotnet tooling
+*.dbmdl
+*.log
+*.vspscc
+
+# Test / coverage results
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+
+# ASP.NET Temporary files
+appsettings.*.json.user
+wwwroot/lib/

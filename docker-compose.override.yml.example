@@ -1,0 +1,8 @@
+services:
+  database:
+    ports:
+      - "27017:27017"
+
+  api:
+    ports:
+      - "8000:80"
