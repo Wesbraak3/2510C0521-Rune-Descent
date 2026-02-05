@@ -6,12 +6,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
 if (app.Environment.IsDevelopment())
 {
-    
     app.MapGet("/", () => "API is running!");
-
     app.UseSwagger();
     app.UseSwaggerUI();
 }
